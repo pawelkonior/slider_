@@ -1,11 +1,110 @@
+@font-face {
+    font-family: 'Roboto Light';
+    src: url('../fonts/roboto-light-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-light-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Roboto Regular';
+    src: url('../fonts/roboto-regular-webfont.woff2') format('woff2'),
+    url('../fonts/roboto-regular-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@keyframes slide-1 {
+    0% { left: 0; }
+    30% { left: 0; }
+    45% { left: -100%; }
+    75% { left: -100%; }
+    90% { left: -200%; }
+    100% { left: -200%; }
+}
+
+@keyframes slide-2 {
+    0% { left: 100%; }
+    30% { left: 100%; }
+    45% { left: 0; }
+    75% { left: 0; }
+    90% { left: -100%; }
+    100% { left: -100%; }
+}
+
+@keyframes slide-3 {
+    0% { left: 200%; }
+    30% { left: 200%; }
+    45% { left: 100%; }
+    75% { left: 100%; }
+    90% { left: 0; }
+    100% { left: 0; }
+}
+
+
 .slider {}
-.slider .slider__slides {}
+.slider .slider__slides {
+    position: relative;
+    overflow: hidden;
+    min-height: 300px;
+}
 .slider .slider__slide {}
 .slider .slider__nav {}
 
-.slide {}
-.slide .slide__hdl {}
-.slide .slide__text {}
+.slide {
+    width: 100%;
+    min-height: 300px;
+    box-sizing: border-box;
+    position: absolute;
+    top: 0;
+    animation-duration: 14s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white;
+    font-family: 'Roboto Regular', sans-serif;
+
+}
+
+.slide:first-child {
+    left: 0;
+    /*animation-name: slide-1;*/
+    background-image: url("../images/slide-1.jpeg");
+}
+
+.slide:nth-child(2) {
+    left: 100%;
+    /*animation-name: slide-2;*/
+    background-image: url("../images/slide-2.webp");
+}
+
+.slide:last-child {
+    left: 200%;
+    /*animation-name: slide-3;*/
+    background-image: url("../images/slide-3.webp");
+}
+
+.slide .slide__cover {
+    background-color: rgba(0, 0, 0, .3);
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.slide .slide__hdl {
+    margin: 0;
+    /*font-weight: 400;*/
+    font-family: 'Roboto Regular', sans-serif;
+}
+.slide .slide__text {
+    /*font-weight: 100;*/
+    font-family: 'Roboto Light', sans-serif;
+}
 .slide .slide__link {}
 
 .nav {}
