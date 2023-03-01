@@ -7,45 +7,88 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 
-<!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
-<!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
-<!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">-->
+    <!--    <link rel="preconnect" href="https://fonts.googleapis.com">-->
+    <!--    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>-->
+    <!--    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap" rel="stylesheet">-->
 
     <link rel="stylesheet" href="src/styles/normalize.css">
     <link rel="stylesheet" href="src/styles/styles.css">
+    <style>
+        .container, .item {
+            border: 1px solid lightblue;
+            padding: 20px;
+            margin: 20px;
+        }
+
+        .container {
+            width: 300px;
+            position: relative;
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            background-color: lightcoral;
+        }
+
+        .item:last-child {
+            background-color: yellowgreen;
+            position: absolute;
+            top: 0;
+            left: 0;
+            margin: 0;
+            transition: all 400ms;
+        }
+
+        .item:last-child:hover {
+            border-radius: 50%;
+        }
+
+        .item:first-child:hover + .item + .item{
+            left: 100%;
+            /*left: auto;*/
+        }
+    </style>
 </head>
 <body>
 
-<div class="slider">
-    <div class="slider__slides">
-        <div class="slider__slide slide">
-            <div class="slide__cover">
-                <h2 class="slide__hdl">Lorem ipsum dolor.</h2>
-                <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nihil?</p>
-                <a href="" class="slide__link">Read more</a>
-            </div>
-        </div>
-        <div class="slider__slide slide">
-            <div class="slide__cover">
-                <h2 class="slide__hdl">Lorem ipsum.</h2>
-                <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-                <a href="" class="slide__link">Read more</a>
-            </div>
-        </div>
-        <div class="slider__slide slide">
-            <div class="slide__cover">
-                <h2 class="slide__hdl">Lorem ipsum.</h2>
-                <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quod repellendus
-                    sint.</p>
-                <a href="" class="slide__link">Read more</a>
-            </div>
-        </div>
-    </div>
-    <nav class="slider__nav nav">
-        <button class="nav__btn">Prev</button>
-        <button class="nav__btn nav__btn--next">Next</button>
-    </nav>
+
+<div class="container">
+    <div class="item"></div>
+    <div class="item"></div>
+    <div class="item"></div>
 </div>
+
+<!--<div class="slider">-->
+<!--    <div class="slider__slides">-->
+<!--        <div class="slider__slide slide">-->
+<!--            <div class="slide__cover">-->
+<!--                <h2 class="slide__hdl">Lorem ipsum dolor.</h2>-->
+<!--                <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Est, nihil?</p>-->
+<!--                <a href="" class="slide__link">Read more</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="slider__slide slide">-->
+<!--            <div class="slide__cover">-->
+<!--                <h2 class="slide__hdl">Lorem ipsum.</h2>-->
+<!--                <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>-->
+<!--                <a href="" class="slide__link">Read more</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <div class="slider__slide slide">-->
+<!--            <div class="slide__cover">-->
+<!--                <h2 class="slide__hdl">Lorem ipsum.</h2>-->
+<!--                <p class="slide__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi quod repellendus-->
+<!--                    sint.</p>-->
+<!--                <a href="" class="slide__link">Read more</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--    </div>-->
+<!--    <nav class="slider__nav nav">-->
+<!--        <button class="nav__btn">Prev</button>-->
+<!--        <button class="nav__btn nav__btn&#45;&#45;next">Next</button>-->
+<!--    </nav>-->
+<!--</div>-->
 
 
 </body>
